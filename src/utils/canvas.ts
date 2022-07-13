@@ -9,5 +9,7 @@ export function imageToCanvas(imageObject:Blob) {
       context.font = "30pt Calibri";
       context.fillText("My TEXT!", 70, 70);
     }
+    console.log(imageObject)
     image.src = URL.createObjectURL(imageObject);
+    console.log(image.src)
 }

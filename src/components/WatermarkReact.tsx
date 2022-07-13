@@ -1,7 +1,8 @@
 import { imageToCanvas } from "../utils/canvas";
-import { WatermarkStyle } from "../types/props";
+import { WatermarkSource, WatermarkPosition } from "../types/props";
 
-const WatermarkReact = ({}:WatermarkStyle) => {
+const WatermarkReact = (props:WatermarkSource & WatermarkPosition) => {
+  console.log(props.dx);
   return (
     <>
       <input
