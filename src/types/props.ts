@@ -1,15 +1,23 @@
-export interface WatermarkSource {
-    width?: number;
-    height?: number;
+export interface WatermarkCanvas {
+    width: number;
+    height: number;
+    baseImage:string
+}
+export interface WatermarkText {
+    content:string
     color?: string;
-    fontSize?: number;
-    fontFamily?: string;
+    font?:string;
     opacity?: number;
-    imageUrl?:string
+    dx?: number;
+    dy?: number;
+}
+export interface WatermarkImage {
+    watermarkImage:string
 }
 
-export interface WatermarkPosition {
-    dx: number;
-    dy: number;
+export interface WatermarkProps {
+    canvasOpts:WatermarkCanvas,
+    text?:WatermarkText,
+    logo?:WatermarkImage
 }
 
