@@ -5,14 +5,15 @@ export interface WatermarkCanvas {
 }
 export interface WatermarkText {
     content:string
-    color?: string;
-    font?:string;
-    opacity?: number;
-    dx?: number;
-    dy?: number;
+    color?: string,
+    font?:string,
+    dx?: number,
+    dy?: number,
 }
 export interface WatermarkImage {
     watermarkImage:string
+    opacity?:number,
+    
 }
 
 export interface WatermarkProps {
@@ -20,4 +21,3 @@ export interface WatermarkProps {
     text?:WatermarkText,
     logo?:WatermarkImage
 }
-
